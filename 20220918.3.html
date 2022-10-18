@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		var arr=['a','b','d','d','c','d','d'];
+		var search='d';
+		var res=[];
+		var i=arr.indexOf(search);
+		while (i!==-1){
+			res.push(i);
+			i=(i<=6?arr.indexOf(search,i+1):-1);
+		}
+		document.write("元素"+search+'在数组中对应下标: '+res+'<br>d出现的次数: '+res .length)
+
+		</script>
+	</body>
+</html>

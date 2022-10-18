@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		 
+		 var arr = [1, 2, 3];         for (var value of arr) {          console.log(value);          }
+		  var height = [];           height[5] =  183;           height[0] =  175;           height[3] =  150;           console.log(height); 
+		   var arr=['a','b','c']
+		   arr[1] = 333;
+		   arr[2]= 555;
+		   arr[0]= 53;
+		   var n1 = 4, n2 = 8;           [n1, n2] = [n2, n1];
+		   console.log(n1+'-'+n2); 
+		   var arr = [1, 2, 3];           [a, b] = arr;           console.log(a + ' - ' + b); 
+			
+			
+		   var arr = [];	              for(var i = 0 ; i< 3; ++i){           arr[i] = []; 	             arr[i][0] = i;	             }
+		   console.log(0,1,2);
+		   var data = ['peach', 'pear', 26, '26', 'grape'];
+		   console.log(data.includes(26, 3)); 
+		   console.log(data.includes(26, -3)); 
+		   console.log(Array.isArray(data)); 
+			var arr =[1,2,33,21,99,18];
+			document.write(arr.indexOf(33))
+			
+			var arr =[1,2,33,21,99,18];
+			for (var i = 0;i<arr.length - 1;i++){
+				for(var j = 0;j<arr.length - 1-i;j++){
+				if(arr[j]<arr[j+1]){
+					temp=arr[j];
+					arr[j]=arr[j+1];
+					arr[j+1]=temp;
+				}
+			  }
+			}
+			document.write(arr)
+			Array.isArray('0');
+			console.log(isNaN(' '));
+			console.log(isNaN('jgjsdjgfdsg '));
+			console.log(parseInt('16.89 '));
+			function greet() {
+             alert('Hello everybody!');
+            }
+			greet();
+			function maxNum(a, b) {            a =  parseInt(a);            b =  parseInt(b);            return a >= b ? a : b;            }
+			console.log(maxNum(2,3))
+			
+			function transferParam() {
+				  document.write(arguments.length+"<br>");
+				  document.write(arguments[0]);
+				}
+			transferParam()
+			var a='one';
+			function test(){
+				var a= 'tow';
+				console.log(a);
+			}
+			test();
+			 for (let a = 0; a < 3; ++a) {  
+			    console.log(a);
+			  }
+			  console.log(a);
+	
+		    var fn = function sum(num1, num2) {
+		      return num1 + num2;
+		    };
+			console.log(fn(2,3));
+			
+			function cal(num1, num2, fn) {
+			    return fn(num1, num2);
+			  }
+			  console.log(cal(45, 55, function (a, b) {
+			    return a + b;
+			  }));
+			  console.log(cal(10, 20, function (a, b) {
+			    return a * b;
+			  }));
+			  var arr = ['a', 'b', 'c'];              arr.map(function(value, index) {                console.log(value, index);              });
+			
+			var arr = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];            var reverse = arr[1].map(function (col, i) {             return arr.map(function (row) {	            return row[i];			              });            });
+			console.log(reverse);
+			
+			function fe(n){
+				if(n ==1){
+					return 1;
+				}else{
+				return n * fe(n-1);
+			}};
+			console.log(fe(5));
+			function fn1(x, y){
+			  return (++x) + (y++);
+			}
+			console.log(fn1(4,5));
+			
+			var obj = 123;            console.log(obj.toString());	            obj = [1, 2, 3];            console.log(obj.toString());	            obj = function() {};            console.log(obj.toString());
+			var o5 = {};			            o5.name = 'jack';            o5.introduce = function () {	              document.write('My name is ' + this.name+"<br>");	           };              document.write(o5.name+"<br>");			            o5.introduce();	
+			o5.name='kfc';
+			document.write(o5.name+"<br>");
+			o5.age ='20';
+			document.write(o5.age+"<br>");
+			o5.introduce();
+			var obj = {name: 'Tom', age: 16};            for (var k in obj) {             document.write(k + '-' + obj[k]+"<br>");               }
+			var obj={class:'2年3班'}
+			for (var k in obj) {
+			 document.write(k + '-' + obj[k]+"<br>");
+			   }
+			var obj = {name: 'Tom', age: 16};            document.write('name' in obj);		            document.write('gender' in obj);
+			function Person(name, age) {               this.name = name;               this.age = age;               this.sayHello = function () {             console.log('Hello, my name is ' + this.name);              };             }
+			 var p1 =new Person('tpm',11)
+			 document.write(p1.name)
+			 
+			 function Person() {
+			   var name = 'Jim';
+			   this.age=33;
+			   this.getName = function () {
+			     return name;
+			   };
+			 }
+			 //var p = new Person();
+			 //document.write(p.name);
+			 //document.write(p.getName());
+			 //document.write(p.ageName());
+			function Person() {             obj = this;//当前对象            return {};              }            var obj, p = new Person();
+			console.log(p === obj);
+			function method() {            document.write(this.name);            }            method.apply({name: '王麻子'});             method.call({name: '鸡哥'});
+			function method1(a, b) {            document.write(a + b);             }            method1.apply({}, ['1', '2']);             method1.call({}, '3', '4');
+			
+			var s="wwwwww"
+			document.write(s.length)
+			var name = 'cccccccc';            if (name.length < 3 || name.length > 10) {             document.write('用户名长度必须在3~10之间。');               }else{
+				   document.write('长度还可以')
+			   }            if (name.toLowerCase().indexOf('admin') !== -1) {             document.write('用户名中不能包含敏感词：admin');              }else{
+				  document.write('恭喜你,没有包含敏感词')
+			  }
+			document.write(Math.random() * (3 - 1) + 1);            document.write(Math.random() * (20 - 10) + 10);	            document.write(Math.random() * (99 - 88) + 88);	            document.write(Math.floor(Math.random() * (3- 1+ 1) + 1)+"<br>");
+			var date = new Date();            document.write(date.toString()+"<br>");            document.write(date.getFullYear()+"<br>");	            document.write(date.getMonth()+"<br>");            document.write(date.getDate()+"<br>");
+			var obj = {
+			  sayHello: function(){
+			    console.log('我是一个带有sayHello方法的对象');
+			  },
+			};
+			var newObj = Object.create(obj);
+			newObj.sayHello();
+			var o1 = {};            var o2 = {name: 'Jim'};             o1.name = o2.name;	             console.log(o1.name);
+			function extend(o1, o2) {             for (var k in o2) {             o1[k] = o2[k];                 }              }
+			 confirm('确定要删除吗？')
+			 
+	
+		    document.write(navigator.appCodeName)
+
+
+			
+			
+			
+
+
+			
+
+			
+			
+			
+		  </script>
+	</body>
+</html>

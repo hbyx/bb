@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		function deepCopy(obj) {
+		    var o = {};
+		    for (var k in obj) {
+		      o[k] = (typeof obj[k] === 'object') ? deepCopy(obj[k]) : obj[k];
+		    }
+		    return o;
+		}
+		var student ={name:"james",class1:"1",score:{math:75,english:67,chemistry:82}}
+		var student1= deepCopy(student);
+		student1.name = '鸡哥';
+		student1.class2='2班';
+		student1.score.math=70;
+		document.write(student.name+','+student.class2+','+student.score.math+'<br>');
+		document.write(student1.name+','+student1.class2+','+student1.score.math+'<br>');
+		document.write(student ===  student1);
+		
+
+		</script>
+	</body>
+</html>
